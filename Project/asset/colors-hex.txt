@@ -1,0 +1,3 @@
+hilight color:      #D35400 //orange
+
+backround color:   #BDC3C7  //silver 
