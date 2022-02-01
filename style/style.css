@@ -1,0 +1,45 @@
+:root{
+    --prime_c: ;
+}
+
+.container {  display: grid;
+    grid-template-columns: 20% 40% 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "sidebar cards extra";
+  }
+  
+  .sidebar { grid-area: sidebar; }
+  
+  .cards {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vmin 100vmin 100vmin 100vmin 100vmin;
+    gap: 10px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+    grid-area: cards;
+
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .one { grid-area: one; }
+  
+  .two { grid-area: two; }
+  
+  .three { grid-area: three; }
+  
+  .four { grid-area: four; }
+  
+  .five { grid-area: five; }
+  
+  .extra { grid-area: extra; }
+  
+  
