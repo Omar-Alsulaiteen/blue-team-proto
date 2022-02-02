@@ -26,7 +26,7 @@ form.addEventListener("submit" ,(e) =>
   perr.removeAttribute("class");
 
   if (!regmail.test(email.value)) {
-    eerr.innerHTML = "Please enter a valid email address. For example name@domain.com<br><br>";
+    eerr.innerHTML = "Please enter a valid email address. For example name@dept.collage.uni.com<br><br>";
     eerr.setAttribute("class", err);
     flag = 0;
   }
