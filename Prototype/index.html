@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign-in Page</title>
+        <script src="{% static './project1a/sign_in.js' %}" defer></script>
+        <script src="https://cdn.tailwindcss.com/"></script>
+    </head>
+    <body class="bg-neutral-900">
+      <a href="{% url 'games:games_list' %}" class="flex justify-center">
+        <span class="self-center text-4xl font-semibold whitespace-nowrap text-white mt-5">my<span class="text-red-700">Games</span></span>
+      </a>
+      <div class="flex justify-center">
+        <div class="flex flex-col justify-center p-4 max-w-sm bg-neutral-900 rounded-lg border border-white shadow-md sm:p-6 lg:p-8 mt-10 w-full">
+          <form class="space-y-6" method="POST" action="{% url 'games:sign_in_check' %}" id="form" name="form">
+            {% csrf_token %}
+            <h3 class="text-xl font-medium text-white">Sign in to myGames</h3>
+                  <!-- for new signed up users -->
+            {% if msg %}
+              <p class='text-green-500'>Successfully Signed up</p>
+            {% endif %}
+            <!-- if accounts already exists -->
+            {% if email %}
+              <p class='text-red-500'>Invalid email or password</p>
+            {% endif %}
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
+              <span id="eerr"></span>
+              <input type="email" name="email" id="email" class="bg-neutral-900 border border-white text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 placeholder-gray-500" placeholder="name@company.com" {% if email %} value="{{email}}" {% endif %}>
+              </div>
+              <div>
+              <label for="password" class="block mb-2 text-sm font-medium text-white">Your password</label>
+              <span id="perr"></span>
+              <input type="password" name="password" id="password" placeholder="Password" class="bg-neutral-900 border border-white text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 placeholder-gray-500">
+            </div>
+            <div class="flex items-start">
+              <!-- <div class="flex items-start">
+                <div class="flex items-center h-5">
+                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-red-600 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-red-600 dark:ring-offset-gray-800">
+                </div>
+                <div class="ml-3 text-sm">
+                <label for="remember" class="font-medium text-white">Remember me</label>
+                </div>
+              </div> -->
+            <!-- <a href="#" class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot Password?</a> -->
+            </div>
+              <button type="submit" id="submit" name="submit" class="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login to your account</button>
+              <div class="text-sm font-medium text-white">
+              Not registered? <a href="{% url 'games:sign_up' %}" class="text-red-700 hover:underline">Create account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>
