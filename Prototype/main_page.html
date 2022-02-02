@@ -18,7 +18,7 @@
   <title>Student Page</title>
 </head>
 <body>
-  <nav class="bg-[#F0F9FF]">
+  <nav class="bg-[#F0F9FF] rounded-b-xl shadow-lg">
     <div class="max-w-6xl mx-auto px-4 py-2">
       <div class="flex justify-between">
           <div class="flex space-x-4">
@@ -29,15 +29,19 @@
           <!-- primary nav -->
           <div class="hidden md:flex items-center space-x-1">
               <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Registration</a>
+              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Schedule</a>
               <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">My Grades</a>
+              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Announcements</a>
+              <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Account</a>
+
           </div>
           </div>
 
           <!-- secondary nav -->
           <div class="hidden md:flex items-center space-x-1">
-          <a href="" class="py-2 px-3 bg-yellow-400 hover:bg-[#FAAE2B] text-yellow-900 hover:text-yellow-800 rounded transition duration-300">Signout</a>
-          </div>
-
+            <a href="" class="py-2 px-3 bg-[#FAAE2B] hover:bg-yellow-200 text-white rounded transition duration-300">Signout</a>
+            </div>
+  
           <!-- mobile button goes here -->
           <div class="md:hidden flex items-center">
           <button class="mobile-menu-button">
@@ -56,6 +60,7 @@
       <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">My Grades</a>
       <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Announcements</a>
       <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Account</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 text-[#FAAE2B] font-medium text-lg">Signout</a>
 
     </div>
   </nav>
@@ -64,17 +69,17 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 grid-flow-rows mt-10 md:grid-cols-2 justify-items-center gap-5 text-sm px-4">
   <div class="border border-black w-full m-2 py-3 px-2 rounded-lg shadow-lg grid md:col-span-2">
     <p class="font-semibold text-lg pb-2">Information Systems Students</p>
-    <div class="flex justify-between">
+    <div class="flex justify-between ">
       <span class="content-start font-medium">Your Student ID</span>
       <span class="content-end">2131110461</span>
     </div>
     <div>
-      <div class="flex justify-between">
+      <div class="flex justify-between ">
         <span class="content-start font-medium">Current Semester</span>
         <span class="content-end">4</span>
       </div>
         <div>
-          <div class="flex justify-between">
+          <div class="flex  justify-between">
             <span class="content-start font-medium">GPA</span>
             <span class="content-end">2.93</span>
           </div>
@@ -187,7 +192,7 @@
             semester is filled with new achievements and success.
         </p>
     </div>
-    <div class="card-footer bg-info">
+    <div class="card-footer bg-info pt-3">
         KU Deanship <small>20th Sep. 2023</small>
     </div>
   </div>
